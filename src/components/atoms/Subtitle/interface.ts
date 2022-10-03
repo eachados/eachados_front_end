@@ -1,4 +1,4 @@
-export interface ITitleProps {
+export interface ISubtitleProps {
   children: string;
   style?: React.CSSProperties;
 }
