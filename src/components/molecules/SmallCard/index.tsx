@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, Text, Subtitle } from "../../atoms";
+import { Title, Text } from "../../atoms";
 import { ISmallCardProps } from "./interface";
 import styles from "./style.module.scss";
 
