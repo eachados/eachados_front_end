@@ -1,6 +1,8 @@
 import React from "react";
 import { Button, Title, Subtitle } from "../../components/atoms";
+import { SmallCard } from "../../components/molecules";
 import { COLORS } from "../../constants/colors/colors";
+import { IMAGES } from "../../constants/images";
 import styles from "./style.module.scss";
 
 const Splash: React.FC = () => {
@@ -22,6 +24,8 @@ const Splash: React.FC = () => {
           children="Teste"
           onClick={() => console.log("[ON CLICK BUTTON] - Teste")}
         />
+
+        <SmallCard title="Title" subtitle="Subtitle" image={IMAGES.cup} />
       </div>
     </div>
   );

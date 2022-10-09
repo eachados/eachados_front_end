@@ -1,0 +1,13 @@
+@import '../../../constants/colors/colors.module.scss';
+
+.container{
+    border-radius: 20px;
+    background-color: $transparent_white;
+    padding: 35px 25px 25px 25px;
+    margin: 10px;
+}
+
+.image{
+    width: 50px;
+    object-fit: contain;
+}

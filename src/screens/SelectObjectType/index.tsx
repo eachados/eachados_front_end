@@ -2,17 +2,18 @@ import React from "react";
 import { SmallCardList } from "../../components/organisms";
 import { Header } from "../../components/molecules";
 import { IMAGES } from "../../constants/images";
+import styles from "./style.module.scss";
 
-const Home: React.FC = () => {
+const SelectObjectType: React.FC = () => {
   return (
-    <>
+    <div className={styles.screen}>
       <Header
         onGoBack={() => console.log("clicou")}
-        title="Title"
-        subtitle="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+        title="Objeto Perdido"
+        subtitle="Responda algumas perguntas sobre o objeto que você perdeu para que possamos cadastrá-lo em nossa base"
       ></Header>
       <SmallCardList
-        title="Tipo do objeto perdido:"
+        title="Qual o tipo do objeto?"
         items={[
           {
             image: IMAGES.cup,
@@ -106,8 +107,8 @@ const Home: React.FC = () => {
           },
         ]}
       />
-    </>
+    </div>
   );
 };
 
-export { Home };
+export { SelectObjectType };
