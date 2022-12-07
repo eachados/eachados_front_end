@@ -1,11 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Button, Title, Subtitle } from "../../components/atoms";
-import { SmallCard } from "../../components/molecules";
 import { COLORS } from "../../constants/colors/colors";
-import { IMAGES } from "../../constants/images";
 import styles from "./style.module.scss";
 
 const Splash: React.FC = () => {
+  const navigate = useNavigate();
+
+  const goToHome = () => {
+    navigate("/select-object-type");
+  };
+
   return (
     <div className={styles.screen}>
       <div className={styles.container}>
@@ -20,12 +25,7 @@ const Splash: React.FC = () => {
 
         <Title style={{ color: COLORS.white, margin: 0 }}>EACH aqui!</Title>
 
-        <Button
-          children="Teste"
-          onClick={() => console.log("[ON CLICK BUTTON] - Teste")}
-        />
-
-        <SmallCard title="Title" subtitle="Subtitle" image={IMAGES.cup} />
+        <Button children="Começar" onClick={goToHome} />
       </div>
     </div>
   );
