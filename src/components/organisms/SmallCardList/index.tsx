@@ -4,9 +4,15 @@ import { SmallCard } from "../../molecules";
 import { ISmallCardListProps } from "./interface";
 import styles from "./style.module.scss";
 
-const SmallCardList: React.FC<ISmallCardListProps> = ({ title, items }) => {
+const SmallCardList: React.FC<ISmallCardListProps> = ({
+  title,
+  items,
+  found,
+}) => {
   const renderItems = () => {
-    return items.map((item) => <SmallCard {...item} key={item.title} />);
+    return items.map((item) => (
+      <SmallCard {...item} key={item.title} found={found} />
+    ));
   };
 
   return (

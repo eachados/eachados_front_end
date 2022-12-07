@@ -5,4 +5,5 @@ export interface ISmallCardProps {
   title: string;
   subtitle?: string;
   image: React.ImgHTMLAttributes<HTMLImageElement>["src"];
+  found?: boolean;
 }

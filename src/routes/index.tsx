@@ -5,6 +5,9 @@ import Match from "../screens/Match";
 import Mural from "../screens/Mural";
 import ObjectDetails from "../screens/NewObject/ObjectDetails";
 import Success from "../screens/NewObject/Success";
+import ObjectDetailsFound from "../screens/NewObjectFound/ObjectDetailsFound";
+import { SelectObjectTypeFound } from "../screens/NewObjectFound/SelectObjectTypeFound";
+import SuccessFound from "../screens/NewObjectFound/SuccessFound";
 import Post from "../screens/Post";
 
 const Router: React.FC = () => {
@@ -18,6 +21,13 @@ const Router: React.FC = () => {
       <Route path="/mural" element={<Mural />} />
       <Route path="/match" element={<Match />} />
       <Route path="/post" element={<Post />} />
+
+      <Route
+        path="/select-object-type-found"
+        element={<SelectObjectTypeFound />}
+      />
+      <Route path="/object-details-found" element={<ObjectDetailsFound />} />
+      <Route path="/success-found" element={<SuccessFound />} />
     </Routes>
   );
 };

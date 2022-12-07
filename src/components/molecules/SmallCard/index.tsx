@@ -9,11 +9,16 @@ const SmallCard: React.FC<ISmallCardProps> = ({
   title,
   subtitle,
   id,
+  found,
 }) => {
   const navigate = useNavigate();
 
   const handlePress = () => {
-    navigate("/object-details", { state: { id } });
+    if (!found) {
+      navigate("/object-details", { state: { id } });
+      return;
+    }
+    navigate("/object-details-found", { state: { id } });
   };
 
   return (

@@ -1,8 +1,8 @@
 import { IObjectCardProps } from "../../components/molecules/ObjectCard/interface";
-import { DummyObjetos } from "../../services/objeto/dummyData";
+import { DummyObjetosMatch } from "../../services/objeto/dummyData";
 
 export const getAllObjects = (): IObjectCardProps[] => {
-  return DummyObjetos.map((o) => ({
+  return DummyObjetosMatch.map((o) => ({
     object: o,
   }));
 };
